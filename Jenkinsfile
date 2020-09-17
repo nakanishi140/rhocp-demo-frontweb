@@ -22,7 +22,7 @@ pipeline {
           openshift.withCluster() {
             openshift.withProject() {
               echo "Build Appliction Image: frontweb"
-              def bc = openshift.selector("bc", "frontweb-v10")
+              def bc = openshift.selector("bc", "frontweb-v11")
               bc.startBuild().logs("-f")
               def bb = bc.narrow("bc").related("builds")
               timeout(10) {
@@ -40,8 +40,8 @@ pipeline {
         script {
           openshift.withCluster() {
             openshift.withProject() {
-              sh "oc rollout restart deployment/frontweb-v10"
-                timeout(10) {
+              sh "oc rollout restart deployment/frontweb-v11"
+                timeout(5) {
               }
             }
           }
