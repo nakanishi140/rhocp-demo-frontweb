@@ -29,12 +29,10 @@
           <a class="nav-link disabled" href="#">Disabled</a>
         </li>
       </ul>
-      <!--
-      <form class="form-inline mt-2 mt-md-0">
-        <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+      <form class="form-inline mt-2 mt-md-0" action="/find" method="get" target="_blank">
+        <input name="key" class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
         <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
       </form>
-      -->
     </div>
   </nav>
 </header>
@@ -55,9 +53,7 @@
           <div class="carousel-caption text-left">
             <h1><%=obj.headline %></h1>
             <p><%=obj.sub_headline %></p>
-            <!--
-            <p><a class="btn btn-lg btn-primary" href="http://www.yahoo.co.jp" target="_blank" role="button">メンズ専門ブランドはこちら</a></p>
-            -->
+            <p><a class="btn btn-lg btn-primary" href="/mens" target="_blank" role="button">メンズ専門ブランドはこちら</a></p>
           </div>
         </div>
       </div>
